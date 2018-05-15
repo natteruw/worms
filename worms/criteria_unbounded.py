@@ -150,7 +150,7 @@ def Crystal_P213_C3_C3(c3a=None, c3b=None, **kw):
     if c3a is None or c3b is None:
         raise ValueError('must specify ...?') #one or two of c6, c2
     #return AxesAngle('Crystal_P213_C3_C3_depth3_1comp', [1,-1,1,0], [-1,1,1,0], from_seg=c3a, to_seg=c3b, **kw)
-    return AxesAngle('Crystal_P213_C3_C3_depth2_1comp', [1,1,1,0], [-1,-1,1,0], from_seg=c3a, to_seg=c3b, space_group_str="P 21 3", **kw)
+    return AxesAngle('Crystal_P213_C3_C3_depth3_1comp', [1,1,1,0], [-1,-1,1,0], from_seg=c3a, to_seg=c3b, space_group_str="P 21 3", **kw)
     #dihedral angle = 70.5288
 
 #### IN PROGRESS ####

@@ -111,7 +111,7 @@ def test_crystal_P213(c3pose, c3_splay_pose, c1pose):
 
     # print(w.scores)
     # vis.show_with_z_axes(w, 0)
-    for i in range(1):
+    for i in range(10):
         p = w.pose(i, only_connected=0)
         assert util.no_overlapping_residues(p) ## basic check on pose to make sure residues are not on top of each other
 
