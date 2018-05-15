@@ -119,7 +119,7 @@ class AxesAngle(WormCriteria): ## for 2D arrays (maybe 3D in the future?)
 
     def symfile_modifiers(self, segpos):
         x, cell_dist = self.alignment(segpos, out_cell_spacing=True)
-        return dict(scale_positions = cell_dist)
+        return dict(scale_positions = 2*cell_dist)
 
     def crystinfo(self, segpos):
         #CRYST1   85.001   85.001   85.001  90.00  90.00  90.00 P 21 3 
@@ -150,7 +150,7 @@ def Crystal_P213_C3_C3(c3a=None, c3b=None, **kw):
     if c3a is None or c3b is None:
         raise ValueError('must specify ...?') #one or two of c6, c2
     #return AxesAngle('Crystal_P213_C3_C3_depth3_1comp', [1,-1,1,0], [-1,1,1,0], from_seg=c3a, to_seg=c3b, **kw)
-    return AxesAngle('Crystal_P213_C3_C3_depth3_1comp', [1,1,1,0], [-1,-1,1,0], from_seg=c3a, to_seg=c3b, space_group_str="P 21 3", **kw)
+    return AxesAngle('Crystal_P213_C3_C3_depth2_1comp', [1,1,1,0], [-1,-1,1,0], from_seg=c3a, to_seg=c3b, space_group_str="P 21 3", **kw)
     #dihedral angle = 70.5288
 
 #### IN PROGRESS ####

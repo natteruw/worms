@@ -865,8 +865,8 @@ class Worms:
         sfxn = self.score0sym
         if symdata is None:
             sfxn = self.score0
-        else:
-            if pcen.pdb_info() and pcen.pdb_info().crystinfo().A() > 0:
+        else: ### UNA -- add documentation here
+            if 0:#pcen.pdb_info() and pcen.pdb_info().crystinfo().A() > 0:
                 if pcen.pdb_info().crystinfo().A() > min_cell_spacing:
                     pyrosetta.rosetta.protocols.cryst.MakeLatticeMover().apply(
                         pcen)
@@ -877,8 +877,8 @@ class Worms:
             else:
                 ros.core.pose.symmetry.make_symmetric_pose(pcen, symdata)
         if fullatom:
-            if symdata is not None:
-                if pfull.pdb_info() and pfull.pdb_info().crystinfo().A() > 0:
+            if symdata is not None: ### UNA -- add documentation here
+                if 0:#pfull.pdb_info() and pfull.pdb_info().crystinfo().A() > 0:
                     pyrosetta.rosetta.protocols.cryst.MakeLatticeMover().apply(
                         pfull)
                 else:
